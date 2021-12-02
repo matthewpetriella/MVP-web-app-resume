@@ -1,0 +1,64 @@
+/* commented out until colors are decided
+:root {
+    --primary-color: add hex code;
+    --secodanry-color: add hex code;
+    --tertiary-color: add hex code;
+}
+*/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header style start */
+header {
+    background-color: slategray;
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: -webkit-sticky;
+    /*position: sticky;*/
+    top: 0;
+    z-index: 9999;
+}
+
+header h1 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 48px;
+    color: whitesmoke;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    
+}
+
+header a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.petriella {
+    color: maroon;
+}
+
+header nav {
+    margin: 10px 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    font-weight: normal;
+    font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+/*header style end*/
+
