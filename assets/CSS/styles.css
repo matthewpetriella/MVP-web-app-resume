@@ -1,14 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #0077ff;
     --secodanry-color: #fb7aff;
     --tertiary-color: #000000;
     --text-shadow: 1px 1px 2px var(--secodanry-color), 0 0 1em var(--primary-color), 0 0 0.2em;
-}
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
@@ -113,11 +111,6 @@ section {
 
 /*about me style start*/
 
-.bg-image {
-    background-image: url('../images/background-image.wp');
-    width: 100%;
-}
-
 #about-me {
     text-align: center;
 }
@@ -138,11 +131,21 @@ section {
 .project-main {
     width: 100%;
     background-size: contain;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .project {
     width: 50%;
     background-size: contain;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 #portfolio h2 {
