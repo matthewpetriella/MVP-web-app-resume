@@ -129,22 +129,7 @@ section {
 }
 
 .project-main {
-    width: 100%;
     background-size: contain;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
-}
-
-.project {
-    width: 50%;
-    background-size: contain;
-    overflow: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     padding: 10px;
 }
 
