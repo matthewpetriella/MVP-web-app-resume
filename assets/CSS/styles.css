@@ -134,7 +134,7 @@ section {
 
 .other-projects {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
 }
 .project-main {
     background-size: contain;
