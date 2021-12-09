@@ -1,24 +1,34 @@
-/* commented out until colors are decided
 :root {
-    --primary-color: add hex code;
-    --secodanry-color: add hex code;
-    --tertiary-color: add hex code;
+    --primary-color: #0077ff;
+    --secodanry-color: #fb7aff;
+    --tertiary-color: #000000;
+    --text-shadow: 1px 1px 2px var(--secodanry-color), 0 0 1em var(--primary-color), 0 0 0.2em;
 }
-*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: black;
 }
 
 /* header style start */
 header {
-    background-color: slategray;
+    background-color: #000000;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
     padding: 20px 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     position: -webkit-sticky;
-    /*position: sticky;*/
+    position: sticky;
     top: 0;
     z-index: 9999;
 }
@@ -27,18 +37,17 @@ header h1 {
     font-weight: bold;
     margin: 0;
     font-size: 48px;
-    color: whitesmoke;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    text-shadow: var(--text-shadow)
     
 }
 
-header a {
+header h1 a {
     text-decoration: none;
-    color: whitesmoke;
+    text-shadow: var(--text-shadow)
 }
 
 .petriella {
-    color: maroon;
+    text-shadow: var(--text-shadow);
 }
 
 header nav {
@@ -54,11 +63,94 @@ header nav ul {
 }
 
 header nav ul li a {
+    text-decoration: none;
     padding: 10px 15px;
     font-weight: normal;
-    font-size: 1.55vw;
-    text-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    font-size: 1.75vw;
+    text-shadow: var(--text-shadow)
+}
+
+header nav ul li a:hover {
+    background: var(--primary-color);
+    color: white;
+    border-radius: 15px;
+    text-shadow: none;
 }
 
 /*header style end*/
 
+section {
+    padding: 60px;
+}
+
+/*hero style start*/
+
+.hero {
+    background-image: url('../images/hero-bg.jpeg');
+    background-size: contain;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+}
+
+.hero-cta h2 {
+    font-size: 48px;
+    text-shadow: var(--text-shadow)
+}
+
+.hero-cta ul {
+    text-shadow: var(--text-shadow);
+    list-style-type: none;
+}
+
+.developer {
+    text-decoration: none;
+}
+
+/*about me style start*/
+
+.bg-image {
+    background-image: url('../images/background-image.wp');
+    width: 100%;
+}
+
+#about-me {
+    text-align: center;
+}
+
+#about-me h2 {
+    text-shadow: var(--text-shadow)
+}
+
+#about-me p {
+    text-shadow: var(--text-shadow);
+}
+/*about me style end*/
+
+.title-card {
+    text-shadow: var(--text-shadow);
+}
+
+.project-main {
+    width: 100%;
+    background-size: contain;
+}
+
+.project {
+    width: 50%;
+    background-size: contain;
+}
+
+#portfolio h2 {
+    
+    text-shadow: var(--text-shadow);
+}
+
+#contact-info h2 {
+    
+    text-shadow: var(--text-shadow);
+}
