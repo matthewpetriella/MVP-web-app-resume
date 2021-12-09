@@ -127,24 +127,17 @@ section {
 .title-card {
     text-shadow: var(--text-shadow);
 }
-
-.project-main {
-    width: 100%;
-    background-size: contain;
-    overflow: auto;
+.projects {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
+    flex-direction: column;
 }
 
-.project {
-    width: 50%;
-    background-size: contain;
-    overflow: auto;
+.other-projects {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
+}
+.project-main {
+    background-size: contain;
     padding: 10px;
 }
 
