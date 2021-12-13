@@ -70,9 +70,9 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background: var(--primary-color);
-    color: white;
+    color: black;
     border-radius: 15px;
-    text-shadow: none;
+    text-shadow: var(--text-shadow);
 }
 
 /*header style end*/
@@ -106,7 +106,7 @@ section {
 }
 
 .developer {
-    text-decoration: none;
+    color: var(--primary-color);
 }
 
 /*about me style start*/
@@ -128,17 +128,43 @@ section {
     text-shadow: var(--text-shadow);
 }
 .projects {
-    display: flex;
     flex-direction: column;
+}
+
+.project-main {
+    background-size: contain;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+}
+
+.project-img-main {
+    border: solid;
+    border-color: var(--primary-color);
+}
+
+.title-card-main {
+    bottom: 10px;
+    left: 10px;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .other-projects {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
 }
-.project-main {
-    background-size: contain;
-    padding: 10px;
+
+.project-img {
+    width: 50%;
+    border: solid;
+    border-color: var(--secodanry-color)
 }
 
 #portfolio h2 {
