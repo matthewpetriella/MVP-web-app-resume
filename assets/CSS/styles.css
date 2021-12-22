@@ -1,13 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap");
 
+@font-face {
+    font-family: 'NeonTubes';
+    src: url(NeonTubes.otf);
+    font-style: normal;
+    font-weight: 100;
+  }
 *,
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-html {
-    font-family: "Balsamiq Sans";
 }
 
 :root {
@@ -22,7 +23,6 @@ html {
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     background-color: black;
 }
@@ -42,15 +42,23 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
-    font-family: Nunito;
+    
 }
+
+/*#name {
+    font-family: NeonTubes;
+    font-weight: 100;
+}*/
 
 .container h1 {
   font-size: 1.5em;
+  font-family: NeonTubes;
   color: var(--clr-neon);
   position: relative;
   margin: 0%;
+
 }
+
 .container h1::before {
   position: absolute;
   content: attr(data-text);
@@ -115,6 +123,7 @@ header nav ul {
     border: var(--clr-neon) .125em solid;
     padding: .25em 1em;
     border-radius: .25em;
+    font-family: NeonTubes;
 
     text-shadow: 0 0 .125em hsl(0, 0%, 100% / .3), 0 0 .45em var(--clr-neon);
 
