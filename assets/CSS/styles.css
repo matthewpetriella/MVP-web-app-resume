@@ -1,4 +1,6 @@
-*{
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -7,21 +9,25 @@
     --secodanry-color: #fb7aff;
     --tertiary-color: #000000;
     --text-shadow: 1px 1px 2px var(--secodanry-color), 0 0 1em var(--primary-color), 0 0 0.2em;
+    --var-color: rgb(43, 46, 255);
+    --clr-neon: hsl(317 100% 54%);
+    --clr-neon-bg: hsl(323 21% 16%);
+
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     background-color: black;
 }
 
 /* header style start */
+
 header {
     background-color: #000000;
     background-size: cover;
     background-position: 50%;
     width: 100%;
-    padding: 20px 35px;
+    padding: normal;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -29,27 +35,64 @@ header {
     position: sticky;
     top: 0;
     z-index: 9999;
-}
-
-header h1 {
-    font-weight: bold;
-    margin: 0;
-    font-size: 48px;
-    text-shadow: var(--text-shadow)
     
 }
 
-header h1 a {
-    text-decoration: none;
-    text-shadow: var(--text-shadow)
+.container h1 {
+  font-size: 1.5em;
+  font-family: NeonTubes;
+  color: var(--clr-neon);
+  position: relative;
+    margin: auto;
+    padding: .125em;
 }
 
-.petriella {
-    text-shadow: var(--text-shadow);
+.container h1::before {
+  position: absolute;
+  content: attr(data-text);
+  text-shadow: 0em 0em 1em var(--clr-neon);
+  filter: blur(50em) brightness(1);
+  animation: flicker 3s linear forwards;
+  animation-delay: 0s;
+}
+@keyframes flicker {
+  0% {
+    filter: blur(5px) brightness(1);
+  }
+  3% {
+    filter: blur(5px) brightness(0);
+  }
+  6% {
+    filter: blur(5px) brightness(1);
+  }
+  7% {
+    filter: blur(5px) brightness(0);
+  }
+  8% {
+    filter: blur(5px) brightness(1);
+  }
+  9% {
+    filter: blur(5px) brightness(1);
+  }
+  10% {
+    filter: blur(5px) brightness(0);
+  }
+  20% {
+    filter: blur(5px) brightness(1);
+  }
+  50% {
+    filter: blur(5px) brightness(1);
+  }
+  99% {
+    filter: blur(5px) brightness(0);
+  }
+  100% {
+    filter: blur(5px) brightness(1);
+  }
 }
 
 header nav {
-    margin: 10px 0;
+    margin: 1em;
 }
 
 header nav ul {
@@ -59,23 +102,72 @@ header nav ul {
     align-items: center;
     list-style: none;
 }
-
-header nav ul li a {
+ /* add source from youtube */
+.neon-button {
+    font-size: 1em;
+    display: inline-block;
+    cursor: pointer;
     text-decoration: none;
-    padding: 10px 15px;
-    font-weight: normal;
-    font-size: 1.75vw;
-    text-shadow: var(--text-shadow)
+    color: var(--clr-neon);
+    border: var(--clr-neon) .125em solid;
+    padding: .5em 1em;
+    border-radius: .25em;
+    font-family: NeonTubes;
+
+    text-shadow: 0 0 .125em hsl(0, 0%, 100% / .3), 0 0 .45em var(--clr-neon);
+
+    box-shadow: inset 0 0 .5em 0 var(--clr-neon), 0 0 .5em 0 var(--clr-neon);
+
+    position: relative;
 }
 
-header nav ul li a:hover {
-    background: var(--primary-color);
-    color: black;
-    border-radius: 15px;
-    text-shadow: var(--text-shadow);
+.neon-button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg) scale(1,0.35);
+    filter: blur(1.1em);
+    opacity: .7;
+
+    
 }
 
-/*header style end*/
+.neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em .5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+    opacity: 1;
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after {
+    opacity: 1;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    background: var(--clr-neon);
+    color: var(--clr-neon-bg);
+    text-shadow: none;
+}
 
 section {
     padding: 60px;
@@ -111,12 +203,26 @@ section {
 
 /*about me style start*/
 
+.avatar {
+    background-image: url('../images/Avatar.jpeg');
+    background-size: contain;
+    border: var(--clr-neon) .125em solid;
+    padding: .5em 1em;
+    border-radius: .25em;
+
+    box-shadow: 0 0 2em 0 var(--clr-neon);
+
+    position: relative;
+
+}
+
 #about-me {
     text-align: center;
 }
 
 #about-me h2 {
     text-shadow: var(--text-shadow)
+    
 }
 
 #about-me p {
@@ -142,8 +248,13 @@ section {
 }
 
 .project-img-main {
-    border: solid;
-    border-color: var(--primary-color);
+    border: var(--clr-neon) .125em solid;
+    padding: .5em 1em;
+    border-radius: .25em;
+
+    box-shadow: 0 0 2em 0 var(--clr-neon);
+
+    position: relative;
 }
 
 .title-card-main {
@@ -163,8 +274,11 @@ section {
 
 .project-img {
     width: 50%;
-    border: solid;
-    border-color: var(--secodanry-color)
+    border-radius: .25em;
+
+    box-shadow: 0 0 2em 0 var(--clr-neon);
+
+    position: relative;
 }
 
 #portfolio h2 {
@@ -176,3 +290,4 @@ section {
     
     text-shadow: var(--text-shadow);
 }
+
