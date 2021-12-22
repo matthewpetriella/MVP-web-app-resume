@@ -104,7 +104,7 @@ header nav ul {
 }
  /* add source from youtube */
 .neon-button {
-    font-size: 1.25em;
+    font-size: 1em;
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
@@ -169,23 +169,6 @@ header nav ul {
     text-shadow: none;
 }
 
-/*header nav ul li a {
-    text-decoration: none;
-    padding: 10px 15px;
-    font-weight: normal;
-    font-size: 1.75vw;
-    text-shadow: var(--text-shadow)
-}
-
-header nav ul li a:hover {
-    background: var(--primary-color);
-    color: black;
-    border-radius: 15px;
-    text-shadow: var(--text-shadow);
-}
-
-/*header style end*/
-
 section {
     padding: 60px;
 }
@@ -220,12 +203,26 @@ section {
 
 /*about me style start*/
 
+.avatar {
+    background-image: url('../images/Avatar.jpeg');
+    background-size: contain;
+    border: var(--clr-neon) .125em solid;
+    padding: .5em 1em;
+    border-radius: .25em;
+
+    box-shadow: 0 0 2em 0 var(--clr-neon);
+
+    position: relative;
+
+}
+
 #about-me {
     text-align: center;
 }
 
 #about-me h2 {
     text-shadow: var(--text-shadow)
+    
 }
 
 #about-me p {
@@ -251,8 +248,13 @@ section {
 }
 
 .project-img-main {
-    border: solid;
-    border-color: var(--primary-color);
+    border: var(--clr-neon) .125em solid;
+    padding: .5em 1em;
+    border-radius: .25em;
+
+    box-shadow: 0 0 2em 0 var(--clr-neon);
+
+    position: relative;
 }
 
 .title-card-main {
@@ -272,8 +274,11 @@ section {
 
 .project-img {
     width: 50%;
-    border: solid;
-    border-color: var(--secodanry-color)
+    border-radius: .25em;
+
+    box-shadow: 0 0 2em 0 var(--clr-neon);
+
+    position: relative;
 }
 
 #portfolio h2 {
