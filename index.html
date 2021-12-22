@@ -1,5 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--embedding font family for header-->
+    <!--source: https://www.youtube.com/watch?v=RKIOGfutCmI-->
+    <style>
+        @font-face {
+            font-family: 'NeonTubes';
+            src: url(./NeonTubes.otf);
+            font-style: normal;
+            font-weight: 100;
+        }
+
+        #name {
+            font-family: NeonTubes;
+            font-weight: 100;
+        }
+
+        #lastName {
+            font-family: NeonTubes;
+            font-weight: 100;
+        }
+    </style>
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +32,7 @@
         <header>
             <h1>
                 <div class="container">
-                    <h1 data-text="MATTHEW PETRIELLA" id="name">MATTHEW PETRIELLA</h1>
+                    <h1 data-text="MATTHEW PETRIELLA" id="name">MATTHEW <span id="lastName">PETRIELLA</span></h1>
                   </div>
             </h1>
             <nav>
