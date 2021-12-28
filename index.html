@@ -10,10 +10,7 @@
             font-weight: 100;
         }
 
-        html {
-            font-family: NeonTubes;
-            font-weight: 100;
-        }
+        
         #name {
             font-weight: 100;
         }
@@ -23,6 +20,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Nunito&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/CSS/styles.css">
         <title>Online Portfolio - Matthew Petriella</title>
     </head>
@@ -31,7 +29,7 @@
         <header>
             <h1>
                 <div class="container">
-                    <h1 data-text="MATTHEW PETRIELLA" id="name">MATTHEW PETRIELLA</h1>
+                    <h1 data-text="MATTHEW V. PETRIELLA" id="name"><span id="initials">M</span>ATTHEW <span id="initials">V</span>. <span id="initials">P</span>ETRIELLA</h1>
                   </div>
             </h1>
             <nav>
@@ -69,7 +67,10 @@
                 <h2>
                     About Me
                 </h2>
+                <br>
                 <img class="avatar" src="./assets/images/Avatar.jpeg" alt="avatar"/>
+                <br></br>
+                <br></br>
                 <p>
                     Former U.S. Army veteran, father to a one year old daughter, and a husband to an amazing wife. Becoming a Full Stack Developer is the path that will lead my family to the next great thing!
                 </p>
@@ -77,66 +78,56 @@
             <!--"about me" End-->
 
             <!--"portfolio" Start-->
-            <section id="portfolio">
-                <div>
-                    <h2>
-                        Portfolio
-                    </h2>
+            <div class="portfolio">
+                <h2>
+                    Portfolio
+                </h2>
+                <br>
+            </div>
+            <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <img id="main-project" src="./assets/images/run-buddy.png" alt=""/>
+                  </div>
                 </div>
-
-                <div class="projects">
-                    <div class="project-main">
-                        <img class="project-img-main" src="./assets/images/run-buddy.jpg" alt="thumbnail of Run Buddy website" />
-                        <div class="title-card-main">
-                            <!-- <h3 class="project-name">Run Buddy</h3>
-                            <h4 class="project-language">HTML5/CSS</h4> -->
-                        </div>
-                    </div>
+                <br>
+                <div class="row">
+                  <div class="col">
+                    <img id="alt-project" src="./assets/images/password-generator.jpeg" alt=""/>
+                  </div>
+                  <div class="col">
+                    <img id="alt-project" src="./assets/images/taskmaster.jpeg" alt=""/>
+                  </div>
                 </div>
-
-                <div class="other-projects">
-                        <img class="project-img" src="./assets/images/password-generator.jpeg" alt="username and password typed in on screen" />
-                        <div class="title-card">
-                          <!-- <h3 class="project-name">Password Generator</h3> 
-                           <h4 class="project-language">Javascript</h4> -->
-                        </div>
-                        <img class="project-img" src="./assets/images/password-generator.jpeg" alt="username and password typed in on screen" />
-                        <div class="title-card">
-                           <!-- <h3 class="project-name">dsnafklsadnlfk</h3>
-                            <h4 class="project-language">Javascript</h4> -->
-                        </div>
-                </div> 
-                
-                <div class="other-projects">
-                    <img class="project-img" src="./assets/images/password-generator.jpeg" alt="username and password typed in on screen" />
-                    <div class="title-card">
-                      <!-- <h3 class="project-name">Password Generator</h3> 
-                       <h4 class="project-language">Javascript</h4> -->
+                <br>
+                <div class="row">
+                    <div class="col">
+                      <img id="alt-project" src="./assets/images/run-buddy.png" alt=""/>
                     </div>
-                    <img class="project-img" src="./assets/images/password-generator.jpeg" alt="username and password typed in on screen" />
-                    <div class="title-card">
-                       <!-- <h3 class="project-name">dsnafklsadnlfk</h3>
-                        <h4 class="project-language">Javascript</h4> -->
+                    <div class="col">
+                      <img id="alt-project" src="./assets/images/run-buddy.png" alt=""/>
                     </div>
-            </div>   
-            </section>
-            <!--"portfolio End"-->
-
-            <!--"contact-info" Start-->
+                  </div>
+              </div>
+            <!--portfolio end-->
+            <!--contact info start-->  
             <section id="contact-info">
                 <div>
                     <h2>
                         Contact Information
                     </h2>
-                    <p>
-                        You can reach me via the following:
+                    <p class="contacts">
+                        Cell: 810.813.3425<br></br> 
+                        Email: PetriellaProductions@gmail.com
                     </p>
-
-                    <!--run buddy "flex-row"; add images for each contact method with either a hover or click element??-->
+                    <hr>
+                    <P class = "created">Created by MVP in 2021</P>
 
                 </div>
             </section>
             <!--"contact-info" End-->
         </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     </body>
 </html>

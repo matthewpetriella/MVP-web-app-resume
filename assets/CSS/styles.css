@@ -12,12 +12,14 @@
     --var-color: rgb(43, 46, 255);
     --clr-neon: hsl(317 100% 54%);
     --clr-neon-bg: hsl(323 21% 16%);
+    --neon-text-shadow: 1px 1px 2px var(--clr-neon), 0 0 1em var(--clr-neon), 0 0 0.2em;
 
 }
 
 body {
     color: white;
     background-color: black;
+    font-family: NeonTubes;
 }
 
 /* header style start */
@@ -39,20 +41,20 @@ header {
 }
 
 .container h1 {
-  font-size: 1.5em;
+  font-size: 1em;
   font-family: NeonTubes;
   color: var(--clr-neon);
   position: relative;
     margin: auto;
-    padding: .125em;
+    padding: .25em 0 0 .25em;
 }
 
 .container h1::before {
   position: absolute;
   content: attr(data-text);
-  text-shadow: 0em 0em 1em var(--clr-neon);
+  text-shadow: var(--neon-text-shadow);
   filter: blur(50em) brightness(1);
-  animation: flicker 3s linear forwards;
+  animation: flicker 2s linear forwards;
   animation-delay: 0s;
 }
 @keyframes flicker {
@@ -104,7 +106,7 @@ header nav ul {
 }
  /* add source from youtube */
 .neon-button {
-    font-size: 1em;
+    font-size: .8em;
     display: inline-block;
     cursor: pointer;
     text-decoration: none;
@@ -197,6 +199,10 @@ section {
     list-style-type: none;
 }
 
+.hero-cta ul li {
+    font-size: 1.25em;
+}
+
 .developer {
     color: var(--primary-color);
 }
@@ -206,6 +212,7 @@ section {
 .avatar {
     background-image: url('../images/Avatar.jpeg');
     background-size: contain;
+    background-position-x: center;
     border: var(--clr-neon) .125em solid;
     padding: .5em 1em;
     border-radius: .25em;
@@ -230,24 +237,9 @@ section {
 }
 /*about me style end*/
 
-.title-card {
-    text-shadow: var(--text-shadow);
-}
-.projects {
-    flex-direction: column;
-}
-
-.project-main {
-    background-size: contain;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/*portfolio section start*/
+#main-project {
     width: 100%;
-    height: auto;
-}
-
-.project-img-main {
     border: var(--clr-neon) .125em solid;
     padding: .5em 1em;
     border-radius: .25em;
@@ -257,23 +249,11 @@ section {
     position: relative;
 }
 
-.title-card-main {
-    bottom: 10px;
-    left: 10px;
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.other-projects {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+#alt-project {
     width: 100%;
-    height: auto;
-}
-
-.project-img {
-    width: 50%;
+    height: 100%;
+    border: var(--clr-neon) .125em solid;
+    padding: .5em 1em;
     border-radius: .25em;
 
     box-shadow: 0 0 2em 0 var(--clr-neon);
@@ -281,8 +261,8 @@ section {
     position: relative;
 }
 
-#portfolio h2 {
-    
+.portfolio {
+    text-align: center;
     text-shadow: var(--text-shadow);
 }
 
@@ -291,3 +271,10 @@ section {
     text-shadow: var(--text-shadow);
 }
 
+.contacts {
+    color: var(--clr-neon);
+}
+
+.created {
+    color: var(--clr-neon);
+}
